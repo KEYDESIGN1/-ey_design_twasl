@@ -18,12 +18,25 @@
             font-family: 'The Sans', sans-serif;
         }
 
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://h.top4top.io/p_3272icu1s0.jpg'); /* تم تحديث رابط الخلفية هنا */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
         .content {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 100vh; /* اجعل المحتوى في منتصف الشاشة */
             text-align: center;
         }
 
@@ -62,24 +75,29 @@
 
         .social-icons {
             margin-top: 20px;
-            display: flex;
-            justify-content: center;
         }
 
         .social-icons a {
             margin: 0 15px;
-            text-decoration: none;
+            text-decoration: none; /* إخفاء النص تحت الأيقونة */
         }
 
         .social-icons img {
             width: 40px;
             height: 40px;
             transition: transform 0.3s ease;
-            object-fit: contain;
+            object-fit: contain; /* ضمان أن الأيقونة تظهر بشكل مربع */
         }
 
         .social-icons img:hover {
             transform: scale(1.1);
+        }
+
+        .portfolio-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
         }
 
         .oval-link {
@@ -121,7 +139,7 @@
                 height: 35px;
             }
 
-            .oval-link .portfolio-text {
+            .portfolio-container .portfolio-text {
                 font-size: 20px;
             }
         }
@@ -160,17 +178,22 @@
     </style>
 </head>
 <body>
+    <div class="background"></div> <!-- الخلفية -->
     <div class="content">
+        <!-- الدائرة مع الشعار -->
         <div class="logo-container">
-            <img src="https://i.top4top.io/p_3271to40j0.jpg" alt="شعار">
+            <img src="https://i.top4top.io/p_3271to40j0.jpg" alt="شعار"> <!-- شعارك -->
         </div>
+        <!-- الاسم -->
         <div class="name">KEY_DESIGN</div>
+        <!-- الوصف -->
         <div class="description">
             مرحبًا بكم في معرض أعمالي، حيث تجدون أفضل التصاميم المبدعة التي أتممتها في مجال الجرافيك.
         </div>
+        <!-- أيقونات التواصل الاجتماعي -->
         <div class="social-icons">
             <a href="https://www.instagram.com/key_design_am/" target="_blank">
-                <img src="https://k.top4top.io/s_3275zrj7e1.jpg" alt="إنستجرام">
+                <img src="https://c.top4top.io/p_32759jen20.png" alt="إنستجرام"> <!-- تم استبدال الصورة القديمة -->
             </a>
             <a href="https://www.tiktok.com/@key_design7" target="_blank">
                 <img src="https://f.top4top.io/p_3271837ug0.png" alt="تيك توك">
@@ -183,7 +206,8 @@
             </a>
         </div>
 
-        <a href="https://keydesign1.github.io/key_design_a3mal/" class="oval-link">
+        <!-- رابط معرض الأعمال مع الشكل المستطيل البيضاوي -->
+        <a href="https://keydesign1.github.io/key_design_a3mal/" class="oval-link"> <!-- رابط المعرض الجديد -->
             <div class="portfolio-text">معرض أعمالي</div>
         </a>
     </div>
