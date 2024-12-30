@@ -30,8 +30,6 @@
             background-position: center;
             background-attachment: fixed;
             z-index: -1;
-            -webkit-background-size: cover; /* لضمان التوافق مع متصفح Safari */
-            -moz-background-size: cover; /* لضمان التوافق مع متصفح Firefox */
         }
 
         .content {
@@ -39,14 +37,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* جعل المحتوى في منتصف الصفحة */
+            height: 100vh;
             text-align: center;
             padding: 0 20px;
         }
 
+        /* الشعار الرئيسي */
         .logo-container {
-            width: 150px;
-            height: 150px;
+            width: 100px; /* تكبير الشعار الرئيسي */
+            height: 100px;
             background-color: #fff;
             border-radius: 50%;
             display: flex;
@@ -59,7 +58,7 @@
         .logo-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* لضمان تناسق الصورة في الدائرة */
+            object-fit: cover;
         }
 
         .name {
@@ -72,62 +71,84 @@
 
         .description {
             font-size: 16px;
+            font-weight: bold; /* تغميق النص */
             color: #333;
             margin-top: 10px;
             max-width: 80%;
         }
 
         .social-icons {
-            margin-top: 20px;
+            margin-top: 10px; /* رفع الأيقونات بمقدار 10 بكسل */
+            margin-bottom: 10px; /* مسافة أسفل الأيقونات */
+            display: flex;
+            justify-content: center; /* توسيط الأيقونات */
+            gap: 15px; /* زيادة المسافة بين الأيقونات */
         }
 
         .social-icons a {
-            margin: 0 15px;
-            text-decoration: none; /* إزالة التسطير تحت الأيقونة */
+            text-decoration: none;
         }
 
         .social-icons img {
-            width: 40px;
-            height: 40px;
+            width: 70px;
+            height: 70px;
             transition: transform 0.3s ease;
-            object-fit: contain; /* لضمان تناسق الأيقونات */
+            object-fit: contain;
         }
 
         .social-icons img:hover {
             transform: scale(1.1);
         }
 
+        /* المعرض */
         .portfolio-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* توزيع المسافة بين الشعار والنص */
             align-items: center;
-            margin-top: 30px;
-        }
-
-        .oval-link {
-            display: inline-block;
-            padding: 20px 50px;
+            margin-top: 10px; /* رفع المعرض بمقدار 10 بكسل */
+            border-radius: 15px; /* زوايا مستديرة للمعرض */
+            padding: 10px 50px 10px 20px; /* تعديل المسافة بين الصورة والنهاية */
             background-color: #fff;
-            border-radius: 50px;
-            border: 2px solid #000;
-            cursor: pointer;
-            text-align: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            margin-top: 20px;
-            text-decoration: none;
+            width: calc(100% - 38px); /* تم تقليل العرض بمقدار 10 بكسل */
+            height: 70px; /* تقليل ارتفاع المعرض للنصف */
         }
 
-        .oval-link .portfolio-text {
-            font-size: 24px;
+        .portfolio-container .portfolio-text {
+            font-size: 20px; /* تنسيق النص داخل المعرض */
             font-weight: bold;
             color: #000;
+            margin-right: 20px; /* مسافة بين النص والنهاية */
+        }
+
+        /* إضافة الصورة المربعة في وسط المعرض على اليسار */
+        .portfolio-container .image-container {
+            width: 50px; /* تصغير حجم الصورة */
+            height: 50px;
+            background-color: #fff;
+            border-radius: 7px;
+            margin-left: 15px; /* المسافة بين الصورة والنص */
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .portfolio-container .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* تصغير شعار المعرض */
+        .portfolio-container .image-container img {
+            width: 50px; /* تصغير الشعار */
+            height: 50px; /* تصغير الشعار */
         }
 
         /* الاستجابة للأجهزة المتوسطة */
         @media (max-width: 768px) {
             .logo-container {
-                width: 120px;
-                height: 120px;
+                width: 90px;
+                height: 90px;
             }
 
             .name {
@@ -140,8 +161,8 @@
             }
 
             .social-icons img {
-                width: 35px;
-                height: 35px;
+                width: 60px;
+                height: 60px;
             }
 
             .portfolio-container .portfolio-text {
@@ -165,16 +186,18 @@
             }
 
             .social-icons img {
-                width: 30px;
-                height: 30px;
+                width: 50px;
+                height: 50px;
             }
 
             .portfolio-container {
                 flex-direction: column;
+                align-items: center;
             }
 
-            .portfolio-container .portfolio-text {
-                font-size: 18px;
+            .portfolio-container .image-container {
+                margin-left: 0;
+                margin-bottom: 10px; /* إضافة مسافة بين الصورة والنص في الشاشات الصغيرة */
             }
 
             .portfolio-container .oval-link {
@@ -212,10 +235,13 @@
             </a>
         </div>
 
-        <!-- رابط معرض الأعمال مع الشكل المستطيل البيضاوي -->
-        <a href="https://keydesign1.github.io/key_design_a3mal/" class="oval-link">
-            <div class="portfolio-text">معرض أعمالي</div>
-        </a>
+        <!-- المعرض مع الصورة المربعة -->
+        <div class="portfolio-container" onclick="window.location.href='https://keydesign1.github.io/key_design_a3mal/'">
+            <div class="image-container">
+                <img src="https://b.top4top.io/p_3286cfavw0.jpg" alt="صورة المعرض">
+            </div>
+            <div class="portfolio-text">معرض الصور</div>
+        </div>
     </div>
 </body>
 </html>
