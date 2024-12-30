@@ -25,7 +25,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://h.top4top.io/p_3272icu1s0.jpg'); /* رابط الخلفية */
+            background-image: url('https://h.top4top.io/p_3272icu1s0.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -44,7 +44,7 @@
 
         /* الشعار الرئيسي */
         .logo-container {
-            width: 100px; /* تكبير الشعار الرئيسي */
+            width: 100px;
             height: 100px;
             background-color: #fff;
             border-radius: 50%;
@@ -71,18 +71,18 @@
 
         .description {
             font-size: 16px;
-            font-weight: bold; /* تغميق النص */
+            font-weight: bold;
             color: #333;
             margin-top: 10px;
             max-width: 80%;
         }
 
         .social-icons {
-            margin-top: 10px; /* رفع الأيقونات بمقدار 10 بكسل */
-            margin-bottom: 10px; /* مسافة أسفل الأيقونات */
+            margin-top: 10px;
+            margin-bottom: 10px;
             display: flex;
-            justify-content: center; /* توسيط الأيقونات */
-            gap: 15px; /* زيادة المسافة بين الأيقونات */
+            justify-content: center;
+            gap: 15px;
         }
 
         .social-icons a {
@@ -103,31 +103,31 @@
         /* المعرض */
         .portfolio-container {
             display: flex;
-            justify-content: space-between; /* توزيع المسافة بين الشعار والنص */
+            justify-content: space-between;
             align-items: center;
-            margin-top: 10px; /* رفع المعرض بمقدار 10 بكسل */
-            border-radius: 15px; /* زوايا مستديرة للمعرض */
-            padding: 10px 50px 10px 20px; /* تعديل المسافة بين الصورة والنهاية */
+            margin-top: 10px;
+            border-radius: 15px;
+            padding: 10px 50px 10px 20px;
             background-color: #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            width: calc(100% - 100px); /* تم تقليل العرض بمقدار 25 بكسل إضافية */
-            height: 70px; /* تقليل ارتفاع المعرض للنصف */
+            width: 100%;
+            max-width: 800px;
+            height: 70px;
         }
 
         .portfolio-container .portfolio-text {
-            font-size: 20px; /* تنسيق النص داخل المعرض */
+            font-size: 20px;
             font-weight: bold;
             color: #000;
-            margin-right: 20px; /* مسافة بين النص والنهاية */
+            margin-right: 20px;
         }
 
-        /* إضافة الصورة المربعة في وسط المعرض على اليسار */
         .portfolio-container .image-container {
-            width: 50px; /* تصغير حجم الصورة */
+            width: 50px;
             height: 50px;
             background-color: #fff;
             border-radius: 7px;
-            margin-left: 15px; /* المسافة بين الصورة والنص */
+            margin-left: 15px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
@@ -136,12 +136,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        /* تصغير شعار المعرض */
-        .portfolio-container .image-container img {
-            width: 50px; /* تصغير الشعار */
-            height: 50px; /* تصغير الشعار */
         }
 
         /* الاستجابة للأجهزة المتوسطة */
@@ -166,7 +160,11 @@
             }
 
             .portfolio-container .portfolio-text {
-                font-size: 20px;
+                font-size: 18px;
+            }
+
+            .portfolio-container {
+                padding: 10px 20px;
             }
         }
 
@@ -193,33 +191,31 @@
             .portfolio-container {
                 flex-direction: column;
                 align-items: center;
+                height: auto;
+                padding: 10px 20px;
             }
 
             .portfolio-container .image-container {
                 margin-left: 0;
-                margin-bottom: 10px; /* إضافة مسافة بين الصورة والنص في الشاشات الصغيرة */
+                margin-bottom: 10px;
             }
 
-            .portfolio-container .oval-link {
-                padding: 8px 30px;
+            .portfolio-container .portfolio-text {
+                margin-top: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background"></div> <!-- الخلفية -->
+    <div class="background"></div>
     <div class="content">
-        <!-- الدائرة مع الشعار -->
         <div class="logo-container">
-            <img src="https://i.top4top.io/p_3271to40j0.jpg" alt="شعار"> <!-- شعارك -->
+            <img src="https://i.top4top.io/p_3271to40j0.jpg" alt="شعار">
         </div>
-        <!-- الاسم -->
         <div class="name">KEY_DESIGN</div>
-        <!-- الوصف -->
         <div class="description">
             مرحبًا بكم في معرض أعمالي، حيث تجدون أفضل التصاميم المبدعة التي أتممتها في مجال الجرافيك.
         </div>
-        <!-- أيقونات التواصل الاجتماعي -->
         <div class="social-icons">
             <a href="https://www.instagram.com/key_design_am/" target="_blank">
                 <img src="https://c.top4top.io/p_3286vz6i60.png" alt="إنستجرام">
@@ -235,7 +231,6 @@
             </a>
         </div>
 
-        <!-- المعرض مع الصورة المربعة -->
         <div class="portfolio-container" onclick="window.location.href='https://keydesign1.github.io/key_design_a3mal/'">
             <div class="image-container">
                 <img src="https://b.top4top.io/p_3286cfavw0.jpg" alt="صورة المعرض">
