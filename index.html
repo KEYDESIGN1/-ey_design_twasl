@@ -103,7 +103,7 @@
         /* المعرض */
         .portfolio-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             margin-top: 10px;
             border-radius: 15px;
@@ -113,6 +113,10 @@
             width: 100%;
             max-width: 800px;
             height: 70px;
+            background-image: url('https://b.top4top.io/p_3286cpkx20.jpg'); /* تم وضع رابط الخلفية هنا */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .portfolio-container .portfolio-text {
@@ -120,6 +124,8 @@
             font-weight: bold;
             color: #000;
             margin-right: 20px;
+            text-align: center;
+            flex: 1;
         }
 
         .portfolio-container .image-container {
@@ -232,9 +238,6 @@
         </div>
 
         <div class="portfolio-container" onclick="window.location.href='https://keydesign1.github.io/key_design_a3mal/'">
-            <div class="image-container">
-                <img src="https://b.top4top.io/p_3286cfavw0.jpg" alt="صورة المعرض">
-            </div>
             <div class="portfolio-text">معرض الصور</div>
         </div>
     </div>
